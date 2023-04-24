@@ -6,8 +6,12 @@ class Employee < Person
     super first_name, last_name, birthday
     @salary = salary 
   end
+ 
+  def salary
+    @salary
+  end
 
   def to_s
-    "Employee: #{@first_name} #{@last_name} with salary: #{@salary}"
+    "Employee: #{@first_name} #{@last_name} with salary: #{salary}"
   end
 end
