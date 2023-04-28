@@ -1,9 +1,9 @@
 class Circle
-  def initialize(radius, height)
-    @radius, @height = radius, height
+  def initialize(params)
+    @radius = params[0]
   end
 
-  def volume
-    2 * Math::PI * @radius * (@radius + @height)
+  def area 
+    Math::PI * @radius ** 2
   end 
 end

@@ -1,9 +1,9 @@
 class Rectangle
-  def initialize (height, width, depth) 
-    @height, @width, @depth = height, width, depth
+  def initialize (params) 
+    @width, @depth = params[0], params[1]
   end
   
-  def volume
-     @height * @width * @depth
+  def area
+     @width * @depth
   end    
 end

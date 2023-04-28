@@ -2,16 +2,12 @@ require_relative("./Circle")
 require_relative("./Rectangle")
 
 class C3DFigure 
-  def initialize(params)
-    case params[0]
-    when 'Circle'
-       @c3DFigure = Circle.new(params[1], params[2])
-    when 'Rectangle'
-       @c3DFigure = Rectangle.new(params[1], params[2], params[3])
-    end
+  def initialize(typeFigure, params)
+    @height = params[0]
+    @c3DFigure = eval(typeFigure).new(params.drop(1))
   end
   
   def volume
-    @c3DFigure.volume
+    @c3DFigure.area * @height 
   end
 end
