@@ -1,6 +1,6 @@
 class Circle
   def initialize(params)
-    @radius = params[0]
+    @radius = params['radius'].to_i
   end
 
   def area 

@@ -1,6 +1,6 @@
 class Rectangle
   def initialize (params) 
-    @width, @depth = params[0], params[1]
+    @width, @depth = params['width'].to_i, params['depth'].to_i
   end
   
   def area
