@@ -7,13 +7,13 @@ class StudentGroup
 
     def add_student(student)
       if is_student_present?(student)
-        @students.append(student)  
-      else
         begin
           raise StandardError.new ("Student with ID #{student.id.to_s} has already registred!")
         rescue StandardError 
           puts $!.message 
-        end 
+        end
+      else
+        @students.append(student)
       end
     end
 
@@ -23,7 +23,7 @@ class StudentGroup
     end
 
     def is_student_present?(student)
-      @students.none?{|elem| elem.id == student.id}
+      @students.any?{|elem| elem.id == student.id}
     end
 
 end
