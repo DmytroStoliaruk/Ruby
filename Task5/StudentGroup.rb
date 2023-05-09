@@ -13,7 +13,7 @@ class StudentGroup
           puts $!.message 
         end
       else
-        @students.append(student)
+        @students << student
       end
     end
 
